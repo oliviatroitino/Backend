@@ -1,0 +1,94 @@
+GET http://localhost:3000/users/
+
+###
+POST http://localhost:3000/users/
+Content-Type: application/json  
+
+{
+  "name": "Olivia",
+  "age": 21,
+  "email": "olivia@gmail.com",
+  "password": "blabla245"
+}
+
+###
+POST http://localhost:3000/users/
+Content-Type: application/json  
+
+{
+  "name": "Olivia",
+  "age": 21,
+  "email": "olivia2@gmail.com",
+  "password": "blabla245"
+}
+
+###
+GET http://localhost:3000/users/67b597d55c7afac19c6d353c/
+
+###
+PUT http://localhost:3000/users/67b59f534023bc389983d61e
+Content-Type: application/json
+
+{
+  "name": "Olivia Updated",
+  "age": 22,
+  "email": "olivia_updated@gmail.com",
+  "password": "newpassword123"
+}
+
+###
+DELETE http://localhost:3000/users/67b597ed5c7afac19c6d3543
+
+### STORAGE
+GET http://localhost:3000/storage/
+
+###
+POST http://localhost:3000/storage/ HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary123
+
+--boundary123
+Content-Disposition: form-data; name="image"; filename="mongoose_logo.png"
+Content-Type: image/png
+
+< ./mongoose_logo.png
+--boundary123--
+
+### 
+GET http://localhost:3000/storage/67b5a61b1e1e904b99ff279f
+
+###
+DELETE http://localhost:3000/storage/67b59f8f97433bf9da1a0b73
+
+###
+PUT http://localhost:3000/storage/67b59f8f97433bf9da1a0b73
+Content-Type: application/json
+
+{
+  "url": "new_url",
+  "filename": "new_fichero"
+}
+
+###
+GET http://localhost:3000/file-1740047426664.png
+
+### 
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+api_key: Api-publica-123
+
+###
+POST http://localhost:3000/users/
+Content-Type: application/json  
+
+{
+  "name": "Olivia",
+  "age": 21,
+  "email": "olivia3@gmail.com",
+  "password": "blabla245"
+  ,"telefono": 123123123
+}
+###
+GET http://localhost:3000/users/
+
+### 
+DELETE http://localhost:3000/users/67c040e3d3f4cd140c98aaae
