@@ -84,11 +84,12 @@ Content-Type: application/json
   "name": "Olivia",
   "age": 21,
   "email": "olivia3@gmail.com",
-  "password": "blabla245"
-  ,"telefono": 123123123
+  "password": "blabla245",
+  "telefono": 345346
 }
+
 ###
 GET http://localhost:3000/users/
 
 ### 
-DELETE http://localhost:3000/users/67c040e3d3f4cd140c98aaae
+DELETE http://localhost:3000/users/67c04b3b97a29877f044034f
