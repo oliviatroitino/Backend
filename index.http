@@ -90,6 +90,3 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/users/
-
-### 
-DELETE http://localhost:3000/users/67c04b3b97a29877f044034f
