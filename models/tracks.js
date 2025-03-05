@@ -13,7 +13,7 @@ const TracksScheme = new mongoose.Schema(
             type: String,
             validate: {
                 validator: (req) => {
-                    return true;
+                    return true; //TODO crear patrón
                 },
                 message: "ERROR_URL",
             }

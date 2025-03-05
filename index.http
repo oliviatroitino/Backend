@@ -107,6 +107,8 @@ Content-Type: application/json
   "duration": {
     "start": 0,
     "end": 300
-  },
-  "mediaId": "603d2f8e2f8e2f8e2f8e2f8e"
+  }
 }
+
+###
+GET http://localhost:3000/tracks/

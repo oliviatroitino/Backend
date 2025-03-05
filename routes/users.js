@@ -6,7 +6,6 @@ const { validatorCreateItem, validatorGetItem } = require("../validators/users")
 
 router.get('/', getItems);
 router.get('/:id', validatorGetItem, getItem);
-//router.post('/', createItem);
 router.delete('/:id', deleteItem);
 router.put('/:id', updateItem);
 router.post('/', validatorCreateItem, customHeader, createItem);

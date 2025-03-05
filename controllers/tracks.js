@@ -1,5 +1,6 @@
-const { tracksModel } = require('../models/tracks');
+const tracksModel = require('../models/tracks.js');
 const { handleHttpError } = require('../utils/handleError');
+const { matchedData } = require('express-validator')
 
 const getItems = async (req, res) => {
     try {
@@ -7,7 +8,7 @@ const getItems = async (req, res) => {
         res.send(data);
     } catch (error) {
         //res.status(500).send({ message: 'Server error' });
-        handleHttpError(res, 'ERROR_GET_ITEMS', 403)
+        handleHttpError(res, 'ERROR_GET_ITEMS', 500)
     }
 };
 
@@ -20,20 +21,19 @@ const getItem = async (req, res) => {
         }
         res.send({ data: item });
     } catch (error) {
-        //res.status(500).send({ message: 'Server error' });
-        handleHttpError(res, 'ERROR_GET_ITEM', 403)
+        handleHttpError(res, 'ERROR_GET_ITEM', 500)
     }
 };
 
 const createItem = async (req, res) => {
-    const { body } = req;
-    // console.log(body);
     try {
+        const body = matchedData(req); // El dato filtrado por el modelo (probar con body=req)
+        console.log('body', body)
         const data = await tracksModel.create(body);
+        console.log(data);
         res.send(data);
     } catch (error) {
-        //res.status(500).send({ message: 'Server error' });
-        handleHttpError(res, 'ERROR_CREATE_ITEM', 403)
+        handleHttpError(res, 'ERROR_CREATE_ITEM', 500)
     }
 };
 
@@ -47,7 +47,7 @@ const updateItem = async (req, res) => {
         res.send({ data: updatedItem });
     } catch (error) {
         //res.status(500).send({ message: 'Server error' });
-        handleHttpError(res, 'ERROR_UPDATE_ITEMS', 403)
+        handleHttpError(res, 'ERROR_UPDATE_ITEMS', 500)
     }
 };
 
