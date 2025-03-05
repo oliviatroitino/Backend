@@ -1,4 +1,4 @@
-const { tracksModel } = require('../models');
+const { tracksModel } = require('../models/tracks');
 const { handleHttpError } = require('../utils/handleError');
 
 const getItems = async (req, res) => {
@@ -54,6 +54,16 @@ const updateItem = async (req, res) => {
 const deleteItem = async (req, res) => {
     try {
         const { id } = req.params;
+        const deletedItem = await tracksModel.deleteOne({ _id: id });
+        res.send({ message: 'Item deleted successfully' });
+    } catch (error) {
+        handleHttpError(res, 'ERROR_DELETE_ITEM', 403)
+    }
+};
+
+const deleteOne = async (req, res) => {
+    try {
+        const { id } = req.params;
         const deletedItem = await Item.findByIdAndDelete(id);
         if (!deletedItem) {
             return res.status(404).send({ message: 'Item not found' });
@@ -63,7 +73,7 @@ const deleteItem = async (req, res) => {
         //res.status(500).send({ message: 'Server error' });
         handleHttpError(res, 'ERROR_DELETE_ITEM', 403)
     }
-};
+}
 
 module.exports = {
     getItems,

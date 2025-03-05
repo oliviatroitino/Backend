@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const { getItems, getItem, createItem, deleteItem, updateItem } = require("../controllers/users.js")
+const { getItems, getItem, createItem, deleteItem, updateItem } = require("../controllers/tracks.js")
 const { customHeader } = require("../middleware/customHeader.js")
 const { validatorCreateItem } = require("../validators/tracks")
 
