@@ -111,4 +111,33 @@ Content-Type: application/json
 }
 
 ###
+
 GET http://localhost:3000/tracks/
+
+###
+
+GET http://localhost:3000/auth/register
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "name": "Olivia",
+  "age": 21,
+  "email": "olivia8@gmail.com",
+  "password": "blabla245"
+}
+
+###
+
+POST http://localhost:3000/auth/register HTTP/1.1 
+Content-Type: application/json 
+
+{
+  "name": "Menganito",
+  "age": 20,
+  "email": "test10@test.com",
+  "password": "HolaMundo.01"
+}
