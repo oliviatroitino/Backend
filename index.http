@@ -116,18 +116,15 @@ GET http://localhost:3000/tracks/
 
 ###
 
-GET http://localhost:3000/auth/register
-
-###
-
 POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
   "name": "Olivia",
   "age": 21,
-  "email": "olivia@gmail.com",
-  "password": "blabla245"
+  "email": "olivia2@gmail.com",
+  "password": "HolaMundo.01",
+  "role": "admin"
 }
 
 ###
