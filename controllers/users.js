@@ -17,9 +17,9 @@ const createItem = async (req, res) => {
 
 const getItems = async (req, res) => {
     try {
-        const result = await UserModel.find({});
-        console.log("Items: ", result);
-        res.status(200).json(result);
+        const user = req.user
+        const data = await UserModel.find({});
+        res.send({data, user});
     } catch (error) {
         handleHttpError(res, 'ERROR_GET_ITEMS', 403);
     }
