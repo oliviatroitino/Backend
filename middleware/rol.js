@@ -11,7 +11,7 @@ const checkRol = (roles) => (req, res, next) => {
         }
         next()
     } catch (err) {
-        handleHttpError(res, "PERMISSIONS_ERROR", 405)
+        handleHttpError(res, "PERMISSIONS_ERROR", 403)
     }
 };
 
