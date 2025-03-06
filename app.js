@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/users', usersRouter)
 app.use('/storage', storageRouter)
 app.use('/tracks', tracksRouter)
-app.use('/auth', authRouter)
+app.use('/auth', authRouter) 
 app.use(express.static("storage")) // http://localhost:3000/file.jpg
 
 dbConnect()
