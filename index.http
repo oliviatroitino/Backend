@@ -126,7 +126,7 @@ Content-Type: application/json
 {
   "name": "Olivia",
   "age": 21,
-  "email": "olivia8@gmail.com",
+  "email": "olivia@gmail.com",
   "password": "blabla245"
 }
 
@@ -151,5 +151,5 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/tracks 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5NzcyMGFlZWRiZmJmMTgzYzkyZDUiLCJyb2xlIjoidXNlciIsImlhdCI6MTc0MTI1NjQ4MCwiZXhwIjoxNzQxMjYzNjgwfQ.Z10_EQ0TRvl6XOS7IRotl2KeNgqJMyx_IXK5TIJJkZ8
+GET http://localhost:3000/tracks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5ODI0NGE4NzVlZTVkYzcxMzE0MzAiLCJyb2xlIjoidXNlciIsImlhdCI6MTc0MTI1OTMzMiwiZXhwIjoxNzQxMjY2NTMyfQ.skKZhEIXU7ALmaKOLJSnqJ4Yn0oITaPKCB0U6mDOKj8
